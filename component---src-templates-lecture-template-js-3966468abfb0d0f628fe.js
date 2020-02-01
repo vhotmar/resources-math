@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{edNQ:function(e,n,t){"use strict";t.r(n),t.d(n,"pageQuery",(function(){return d}));var a=t("q1tI"),r=t.n(a),u=t("Bl7J"),d="1209999644";n.default=function(e){var n=e.data;return r.a.createElement(u.a,null,r.a.createElement("div",{dangerouslySetInnerHTML:{__html:n.markdownRemark.html}}))}}}]);
+//# sourceMappingURL=component---src-templates-lecture-template-js-3966468abfb0d0f628fe.js.map
