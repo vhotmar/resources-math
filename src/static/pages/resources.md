@@ -1,11 +1,21 @@
+---
+path: "/math-resources"
+date: "2020-20-01"
+title: "Math resources"
+---
+
+
+## Komplexní analýza
+
+
 ## TMI
 
 - [Radon Nikodyn](http://people.math.sc.edu/schep/radon.pdf)
 - [L_p Completness](https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes_ch7.pdf)
 
 
-
 ### Otázky
+
 
 ```
 Definice (2.1, 4) - 𝜎-algebra
@@ -86,3 +96,4 @@ Definice (13.4, 32) - M(X, A, R), M(X, A, K)
 ```
 
 Copy to [this](https://l.facebook.com/l.php?u=https%3A%2F%2Ffast-learning-rqshxdckgf.now.sh%2F%3Ffbclid%3DIwAR39GF8gxwDmyyZ_Y9gScV2oycSyM3TGux-2mfR4xNyUc6jo6dVQDvPVYiw&h=AT3lKgLkOClA18yFrieYHxZZCuMq08yJE21dKWE_tSRArEyqn57JVDmmb7Hlr25bcjTv9jucR6PK7wr3BpcFH8eQu2D4VYFPqC_kwMkyKpOs2mPqklx3-VmH7TRyrWruqbIIX95CfPs)
+
