@@ -78,23 +78,80 @@ $$
 $$
 
 **Důkaz**
-Z definice derivace $f'(z)=A$ platí právě tehdy když $\lim\limits_{u \to z} \frac{f(u)-f(z)}{u-z}=A$,
-což můžeme upravit: 
-$$
-\begin{aligned}
-\lim\limits_{h \to 0} \frac{f(z+h)-f(z)-Ah}{h}&=0\\
-\lim\limits_{h \to 0} \frac{|f(z+h)-f(z)-Ah|}{|h|}&=0
-\end{aligned}
-$$
-Nechť $A=c+di$, pak při rozložení na $f_1$ a $f_2$ dostaneme:
+Z definice derivace $f'(z)=A$ platí právě tehdy když $\lim\limits_{h \to 0} \frac{f(z+h)-f(z)}{h}=A$,
+což můžeme zderivovat pro "reálnou část" (dle $x$):
 
 $$
 \begin{aligned}
-\lim\limits_{h \to 0} \frac{|f_1(z+h)-f_1(z)-ch|}{|h|}=0
-&\land
-\lim\limits_{h \to 0} \frac{|f_2(z+h)-f_1(z)-dh|}{|h|}=0\\
+\lim\limits_{h \to 0} \frac{f_1(z+h) + if_2(z+h)-f_1(z)-if_2(z)}{h}&=c+di\\
+\lim\limits_{h \to 0} \frac{f_1(z+h) - f_1(z)}{h}
++ i\lim\limits_{h \to 0} \frac{f_2(z+h) - f_2(z)}{h}
+&=c+di\\
+\end{aligned}\\
+
 \frac{\partial f_1}{\partial x}=c
-&\land
-\frac{\partial f_2}{\partial y}=d
+\land
+\frac{\partial f_2}{\partial x}=d
+$$
+
+A pro "komplexní část" (dle $y$):
+
+$$
+\begin{aligned}
+\lim\limits_{h \to 0} \frac{f_1(z+ih) + if_2(z+ih)-f_1(z)-if_2(z)}{ih}&=c+di\\
+\lim\limits_{h \to 0} \frac{f_1(z+ih) - f_1(z)}{ih}
++ i\lim\limits_{h \to 0} \frac{f_2(z+ih) - f_2(z)}{ih}
+&=c+di\\
+-i\lim\limits_{h \to 0} \frac{f_1(z+ih) - f_1(z)}{h}
++ \lim\limits_{h \to 0} \frac{f_2(z+ih) - f_2(z)}{h}
+&=c+di\\
+\end{aligned}\\
+\frac{\partial f_1}{\partial y}=-d
+\land
+\frac{\partial f_2}{\partial y}=c
+$$
+
+Dáme parciální derivace do rovnosti (neboť se musí tyto limity rovnat aby derivace existovala):
+
+$$
+\begin{aligned}
+\frac{\partial f_1}{\partial x}&=\frac{\partial f_2}{\partial y}\\
+\frac{\partial f_1}{\partial y}&=-\frac{\partial f_2}{\partial x}
 \end{aligned}
 $$
+
+### Věta BD
+Pokud $\exists f'(z)$, pak je jakobián $\hat{￿f}$ v $[a,b]$ roven $|f'(z)|^2$
+
+### Definice - mocniná řada
+Nechť $a \in \Complex, \{c_n\}^{\infty}_{n=0}$ je posloupnost komplexních čísel.
+Nekonečnou řadu funkcí $\sum^{\infty}_{n=0}c_n(z-a)^n$ nazýváme *mocninou řadou o středu a*.
+
+*Poloměrem konvergence* této řady rouzumíme 
+$R=\sup\{r \in [0, \infty];\sum^{\infty}_{n=0}|c_n|r^n \; \text{konverguje}\}$
+
+### Definice - kruh konvergence mocniné řady
+Množinu $U(a,R)=\{z \in \Complex; |a-z|<R\}$ nazýváme *kruh konvergence mocniné řady*.
+
+### Věta 3
+Řada $\sum^{\infty}_{n=0}c_n(z-a)^n$ konverguje lokálně stejnoměrně na svém kruhu konvergence.
+
+**Důkaz**
+Označme $f_N=\sum^N_{n=0}c_n(z-a)^n$, pak pro všechny $M \geq N$ platí:
+
+$$
+\begin{alignedat}
+|f_M-f_N| &= \left| \sum^M_{n=N+1}c_n(z-a)^n \right|\\
+&\leq \sum^M_{n=N+1}|c_n||z-a|^n && a\\
+&\leq \sum^M_{n=N+1}|c_n|r_0^n && 0 < r_0 < R; |z-a| < r_0
+\end{alignedat}
+$$
+
+A tato řada konverguje, neboť je uvnitř kruhu konvergence.
+Tedy $f_N$ je stejnoměrně cauchyovská na $U(a,r_0)$, tedy tam i stejnoměrně konverguje.
+
+### Věta BD
+Položme $L=\limsup \sqrt[n]{|c_n|}$, pokud $L \in (0, \infty)$, pak $R=\frac{1}{L}$, pokud $L = 0$, pak $R=\infty$
+
+### Věta 4
+Nechť 
